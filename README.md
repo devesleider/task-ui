@@ -1,27 +1,29 @@
-# TaskUi
+# Gestion de Tareas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Aplicación para la gestion de tareas.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (versión X.X.X)
+- Angular CLI versión 15.2.0
+- Otras dependencias y configuraciones necesarias.
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clona este repositorio: `git clone https://github.com/devesleider/task-ui.git`
+2. Navega al directorio del proyecto: `cd task-ui`
+3. Instala las dependencias: `npm install`
 
-## Build
+## Estructura del Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El proyecto esta construido de manera modular, en cada uno de los modulos se encuentran lo componentes correspondientes para realizar la acciones, como guardado, listado y edición, ademas de contar con un servicio para cada modulo. Tambien cuenta con un directorio shared, donde estan los componentes compartidos, para que puedan ser usados por sistintos modulos y sus componentes.
 
-## Running unit tests
+## Uso del Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Para iniciar la aplicación en modo desarrollo: `ng serve`
 
-## Running end-to-end tests
+## Historial de Cambios
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Versión 1.0.0** (06/11/2023)
+  - Primera versión lanzada.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

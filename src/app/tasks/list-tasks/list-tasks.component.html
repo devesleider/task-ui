@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<div class="card col-10 offset-1 mt-4">
+    <div class="card-header text-end">
+        <div class="row">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Categoria</label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" [formControl]="categorie" (change)="getTaskByUser(categorie.value)">
+                    <option *ngFor="let categorie of categories" value="{{categorie.id}}">{{categorie.name}}</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary pull-right" (click)="openModal()">Nueva Tarea</button>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Fecha Limite</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col" id="buttons"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks">
+                    <td>{{task.title}}</td>
+                    <td>{{task.deadline | date:'dd/MM/yyyy'}}</td>
+                    <td>{{task.categorie}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success" id="starbtn" placement="top"
+                            ngbTooltip="Iniciar Tarea" (click)="updateTask(task, false)">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger" placement="top" ngbTooltip="Finalizar Tarea"
+                            (click)="updateTask(task, true)">
+                            <i class="bi bi-stop-fill"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
